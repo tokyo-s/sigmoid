@@ -9,8 +9,8 @@ import random
 import sys
 from sklearn.cluster import KMeans
 from random import randrange
-import matplotlib.pyplot as plt
 from scipy.spatial.distance import cdist
+from crucio.SMOTE import SMOTE
 from .erorrs import NotBinaryData, NoSuchColumn, NoSuchMethodError, MissingDataError, DifferentColumnsError
 
 def warn(*args, **kwargs):
