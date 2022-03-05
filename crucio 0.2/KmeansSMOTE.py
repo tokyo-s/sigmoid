@@ -178,7 +178,7 @@ class KmeansSMOTE:
             average_minority_distance = distances_df.to_numpy().sum()/(len(distances_df)*(len(distances_df)-1))
 
 
-            density_factor = len(minority_cluster_data)/average_minority_distance
+            density_factor = len(minority_cluster_data)/(average_minority_distance**self.de)
             sparsity_factor = 1/density_factor
             sparsity_factors.append(sparsity_factor)
 
